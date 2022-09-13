@@ -19,7 +19,7 @@ describe('Header', () => {
   it('the search bar returns the correct search results', () => {
     cy.getBySel('search-input').eq(0).type('reloj{enter}')
 
-    cy.getBySel('product-tag').within(() => {
+    cy.getBySel('product-card').within(() => {
       cy.getBySel('product-name').should('contain', 'Reloj Citizen 1')
     })
   })
